@@ -14,22 +14,22 @@
     <main>
       <header>
         <h1>
-          Wishlog
+         Faded Memories Feeling Log
         </h1>
       </header>
       <ul id="wishes"></ul>
       <p>
-        <a href="index.html">submit a wish</a>
+        <a href="index.html">submit a feeling</a>
       </p>
       <script>
-        getWishes();
-        async function getWishes() {
+        getFeelings();
+        async function getFeelings() {
           // this is a GET request, by default
-          const response = await fetch('/wish');
+          const response = await fetch('/feeling');
           const data = await response.json();
 
           // add a list element for each item in the response.
-          const wishList = document.getElementById('wishes');
+          const feelingList = document.getElementById('feelings');
           for (let item of data) {
             console.log(item);
             const listItem = document.createElement("li");
