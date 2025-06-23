@@ -8,28 +8,28 @@
     <title>Database example</title>
 
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <main>
       <header>
         <h1>
-         Faded Memories Feeling Log
+          Wishlog
         </h1>
       </header>
       <ul id="wishes"></ul>
       <p>
-        <a href="index.html">submit a feeling</a>
+        <a href="index.html">submit a wish</a>
       </p>
       <script>
-        getFeelings();
-        async function getFeelings() {
+        getWishes();
+        async function getWishes() {
           // this is a GET request, by default
-          const response = await fetch('/feeling');
+          const response = await fetch('/wish');
           const data = await response.json();
 
           // add a list element for each item in the response.
-          const feelingList = document.getElementById('feelings');
+          const wishList = document.getElementById('wishes');
           for (let item of data) {
             console.log(item);
             const listItem = document.createElement("li");

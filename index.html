@@ -6,9 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-
-    <link rel="stylesheet" href="style.css" />
-    
+    <link rel="stylesheet" href="/alaalang_kupas/public/style.css" />
 
     <script src="https://unpkg.com/hydra-synth"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
@@ -19,7 +17,7 @@
         position: relative;
         width: 800px;
         height: 800px;
-        margin: 0 auto; 
+        margin: 0 auto;
       }
       /* Style for both canvases */
       canvas {
@@ -29,28 +27,29 @@
       }
       /* Specific styles for centered canvas */
       #canvas {
-        width: 400px; 
-        height: 400px; 
-        top: 50%; 
-        left: 50%; 
-        transform: translate(-50%, -50%); 
+        width: 400px;
+        height: 400px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     </style>
   </head>
   <body>
     <h1>what do faded memories feel like?</h1>
-        <main>
-        <form id="feelingForm" enctype="application/json">
-          <label for="feeling">Faded memories feel like...</label>
+    <main>
+         <h2>Tell us your secret wish (we won't keep the secret though)</h2>
+        <form id="wishForm" enctype="application/json">
+          <label for="wish">I wish for</label>
           <input
             type="text"
-            id="feeling"
-            name="feeling"
-            placeholder="Your feelings about faded memories"
+            id="wish"
+            name="wish"
+            placeholder="Your wish"
           />
           <input type="submit" id="submit" value="Submit" />
         </form>
-        <p><a href="alaala.html">See all feelings</a></p>
+        <p><a href="/alaalang_kupas/public/wishes.html">See all wishes</a></p>
     </main>
 
     <!-- Canvas container to hold both canvases -->
@@ -59,9 +58,7 @@
       <canvas id="canvas" width="400" height="400"></canvas>
     </div>
 
-    <script src="four-channel.js" defer></script>
-    <script src="images-array.js" defer></script>
-
-    
+    <script src="/alaalang_kupas/public/four-channel.js" defer></script>
+    <script src="/alaalang_kupas/public/images-array2.js" defer></script>
   </body>
 </html>

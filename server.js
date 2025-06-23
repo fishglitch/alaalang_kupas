@@ -45,7 +45,7 @@ app.post('/wish', (request, response) => {
 /* GET requests: server sends the client all the wishes from
  * the database
  */
-app.get('/feeling', (request, response) => {
+app.get('/wish', (request, response) => {
   // grab all the data (since it's not too much!) and then 
   // sort it by timestamp in reverse chronological order
   // (newest first).

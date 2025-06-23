@@ -3,8 +3,8 @@
  * key in the text input box.
  */
 
-const form = document.getElementById('feelingForm');
-const wish = document.getElementById('feeling');
+const form = document.getElementById('wishForm');
+const wish = document.getElementById('wish');
 
 /*
  * listen for events on the form, rather than the button,
@@ -26,17 +26,17 @@ form.addEventListener('submit', async event => {
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      feeling: feeling.value
+      wish: wish.value
     })
   };
   
   // send the request and await a response
-  const response = await fetch("/feeling", options);
+  const response = await fetch("/wish", options);
   
   // parse the response into JSON
   const json = await response.json();
   console.log(json);
 
-  // clear the feeling value!
-  feeling.value = "";
+  // clear the wish value!
+  wish.value = "";
 });
